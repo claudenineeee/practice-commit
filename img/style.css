@@ -22,29 +22,41 @@ nav img{
 .nav-links{
     flex: 1;
     text-align: right;
+    
+    
 }
 .nav-links ul li{
+    
     list-style: none; 
     display: inline-block;
     padding: 8px 12px;          
-    position: relative;
-}
+    
+}   
+
 .nav-links ul li a{
+    position: relative;
     color: #ffff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: 20px;
+    
 }
-.nav-links ul li::after{
+.nav-links ul li a::after{
     content: '';
     width: 0%;
-    height: 2px;
-    background: rgba(67, 162, 217);
-    display: block;
-    margin: auto; 
+    left: 0;
+    height: 3.5px;
+    bottom: -7px;
+    background: rgb(25, 188, 213);
+    position: absolute;
     transition: 0.5s;
+    display: block;
 }
-.nav-links ul li:hover::after{
+
+.nav-links ul li a:hover::after{
     width: 100%;
+}
+.icon{
+    display: none;
 }
 .text-box{
     width: 50%;
@@ -82,8 +94,12 @@ nav img{
     transition: 1s;
 }
 nav .fa{
-    display: none;
+    display: hidden;
+    
 }
+.bx-menu, .bxs-x-circle {
+    display: none;
+  }
 @media(max-width: 600px){
     .text-box h1{
         font-size: 20px;
@@ -102,7 +118,7 @@ nav .fa{
         z-index: 2;
         transition: 1s ;
     }
-    .bx-menu, .bx-message-square-x{
+    .bx-menu, .bxs-x-circle{
         display: block;
         color: #fff;
         margin: 10px;
@@ -131,9 +147,11 @@ p{
     padding: 10px;
 }
 .row{
-    margin-top: 5%;
+    position: relative;
+    margin-top: 6%;
     display: flex;
     justify-content: space-between;
+    overflow: auto;
 }
 .course-col{
     flex-basis: 31%;
@@ -164,7 +182,8 @@ h3{
     width: 80%;
     margin: auto;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 5
+    0px;
 }
 .place-col{
     flex-basis: 32%;
@@ -176,6 +195,7 @@ h3{
 .place-col img{
     width: 100%;
     display: block;
+    height: 100%;
 }
 .layer{
     background: transparent;
@@ -263,7 +283,7 @@ h3{
 .YOWW-col .fa{
     color: #f44336;
 }
-@media (max-width: 600px){
+@media screen and (max-width: 600px){
     .YOWW-col img{
         margin-left: 0px;
         margin-right: 15px;
@@ -301,7 +321,13 @@ h3{
     margin-top: 20px;
     font-weight: 600;
 }
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 
+}
 
 
 
